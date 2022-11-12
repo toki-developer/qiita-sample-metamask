@@ -2,6 +2,9 @@ import { useEffect } from "react";
 
 import { useSetAddress, useSetAddressError } from "./account";
 
+/**
+ * @package
+ */
 export const InitializeAccount = ({
   children,
 }: {

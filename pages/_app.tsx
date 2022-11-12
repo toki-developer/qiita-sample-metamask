@@ -2,7 +2,7 @@ import type { AppPropsWithLayout } from "next/app";
 import Head from "next/head";
 import type { ReactElement } from "react";
 import { RecoilRoot } from "recoil";
-import { InitializeAccount } from "src/utils/wallet/InitializeAccount";
+import { InitializeAccount } from "src/utils/wallet";
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page: ReactElement) => page);
