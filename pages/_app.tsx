@@ -1,6 +1,7 @@
 import type { AppPropsWithLayout } from "next/app";
 import Head from "next/head";
 import type { ReactElement } from "react";
+import { RecoilRoot } from "recoil";
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page: ReactElement) => page);
@@ -9,7 +10,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       <Head>
         <title>sample</title>
       </Head>
-      {getLayout(<Component {...pageProps} />)}
+      <RecoilRoot>{getLayout(<Component {...pageProps} />)}</RecoilRoot>
     </>
   );
 };
