@@ -2,6 +2,7 @@ import type { AppPropsWithLayout } from "next/app";
 import Head from "next/head";
 import type { ReactElement } from "react";
 import { RecoilRoot } from "recoil";
+import { InitializeAccount } from "src/utils/wallet/InitializeAccount";
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page: ReactElement) => page);
@@ -10,7 +11,11 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       <Head>
         <title>sample</title>
       </Head>
-      <RecoilRoot>{getLayout(<Component {...pageProps} />)}</RecoilRoot>
+      <RecoilRoot>
+        <InitializeAccount>
+          {getLayout(<Component {...pageProps} />)}
+        </InitializeAccount>
+      </RecoilRoot>
     </>
   );
 };
