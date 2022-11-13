@@ -1,4 +1,6 @@
-## Next.js Template
+## Qiita (メタマスクに接続, アカウント切り替え, ネットワーク切り替え【Next.js】) サンプルコード
+
+https://qiita.com/tokio_dev/items/4065eed0a5637aa1a58b
 
 ### 利用技術
 
